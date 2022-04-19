@@ -1,0 +1,289 @@
+/***** RESET ****/
+
+*{
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/****Var*****/
+:root{
+--side-bg:#1992D4;
+}
+
+/**** Global ****/
+
+/**** Layout ****/
+
+.admin-grid{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 190px 1fr;
+  height: 100vh;
+}
+/***** Header*****/
+
+.header-menu{
+  background-color: #FAFAF9;
+  display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: 80px 1fr;
+}
+
+.search-section{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap:20px;
+}
+
+.search-bar{
+  width: 600px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #E7E5E4;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  gap: 30px;
+}
+
+.mini-user{
+  width: 60px;
+  height: auto;
+  border-radius: 75px;
+}
+
+.user-name{
+  font-family:Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.user-options{
+  display: flex;
+  align-items: center;
+  padding:0 0 20px 20px;
+  gap:20px;
+}
+
+.user-avatar{
+  width: 90px;
+  height: auto;
+  border-radius: 75px;
+}
+
+.user-welcome{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.greeting{
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family:Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+.user-nick{
+  font-family:Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  font-size:1.5rem;
+  font-weight: bold;
+}
+
+.btns{
+  grid-column: 2/3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-layout{
+  color: white;
+  background-color: #1992D4;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+}
+
+/*********** Side Menu******/
+.side-nav{
+  display: flex;
+  grid-area:1/1/3/2;
+  flex-direction: column;
+  background-color:var(--side-bg);
+  justify-content: flex-start;
+  gap: 30px;
+  padding-top:20px;
+}
+
+.side-nav-main{
+  flex-direction: column;
+  display: flex;
+  gap:20px;
+  font-size: 1.5rem;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  padding-top: 30px;
+}
+
+.side-nav-item{
+  color:white;
+  padding-left: 20px;
+  display: flex;
+  gap:25px;
+}
+
+
+.logo{
+  color: white;
+  font-size: 2rem;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+/********Content Layout******/
+
+.content{
+  display: grid;
+  grid-area: 2/2/3/3;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 80px 290px 250px;
+  background-color: #EFEFF5;
+}
+
+/********* Project Layout *****/
+
+.projects{
+  grid-area:1/1/5/2;
+  display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    margin-left:20px;
+    grid-template-rows: repeat(auto-fit,minmax(70px,1fr));
+}
+
+.title{
+  display: flex;
+  grid-area: 1/1/2/4;
+  align-items: flex-end;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Roboto;
+  padding-bottom: 10px;
+}
+
+/********Project cards *******/
+
+.card-block{
+  grid-area: 2/1/15/5;
+  display: grid;
+  grid-template-rows: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.card{
+  background-color: white;
+  border-radius: 10px;
+  padding:25px;
+  border-left:5px solid #F0B429;
+  width: 410px;
+  height: 210px;
+}
+
+.card-title{
+  font-family:Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-content{
+  display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+.card-social-btn{
+
+  padding-top: 30px;
+}
+/*****Announcements****/
+
+.announcements{
+  display: grid;
+  grid-template-rows: 70px 265px;
+    grid-area:1/2/3/3;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+
+
+.announcement-block{
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  height: 323px;
+  width: 280px;
+  gap: 2px;
+  flex-direction: column;
+  padding-top: 32px;
+}
+
+.announcement-card{
+  display: flex;
+  padding: 0px 30px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.announcement-title{
+  font-weight: bold;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+.announcement-content{
+  color:#787579;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #e7e5e4;
+}
+
+.announcement-block:last-child>.announcement-card:last-child>.announcement-content{
+  border-bottom:white;
+}
+
+/****TRENDING****/
+
+.trending{
+  grid-area: 3/2/5/3;
+  grid-template-rows: repeat(auto-fill,minmax(60px,1fr));
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.trending-block{
+  grid-area:2/1/5/3;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 15px 0px 20px 20px;
+  height: 318px;
+}
+
+.trending-card{
+  display: flex;
+}
+
+.trending-container{
+  justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-left: 27px;
+    gap: 5px;
+}
